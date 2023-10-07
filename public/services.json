@@ -1,0 +1,59 @@
+
+     [
+        {
+            "id":1,
+            "name": "Yoga Retreat",
+            "image": "https://i.ibb.co/2YSzdcw/slim-beautiful-woman-silhouette-doing-sports-morning-park-doing-yoga.jpg",
+            "price": "$300",
+            "short_description": "Embark on a transformative journey with our Yoga Retreat, nestled amidst the tranquil embrace of nature. This immersive experience invites practitioners of all levels to delve into the art of yoga, mindfulness, and self-discovery. Guided by seasoned instructors, daily yoga sessions encompass a variety of styles, fostering strength, flexibility, and inner peace. Dive into the serenity of meditation, mastering techniques that quiet the mind and open the heart. Surrounded by lush landscapes, participants can indulge in rejuvenating nature walks, finding harmony in the rustling leaves and bird songs. Gourmet, locally sourced meals nourish the body, promoting overall well-being. The retreat offers a sanctuary for relaxation, with spa treatments and holistic therapies to restore balance. With comfortable accommodations harmonizing with the environment, this retreat is a holistic haven. Join us in this soul-renewing odyssey, a chance to reconnect with oneself and nature’s essence.",
+            "button": "Learn More"
+
+           
+        },
+        {
+            "id":2,
+            "name": "Your Pathway to Wellness and Vitality",
+            "image": "https://i.ibb.co/ncr98Hx/wellness-lifestyle-refresh-flower.jpg",
+            "price": "$50",
+            "short_description": "Immerse yourself in a profound wellness experience at our Wellness Retreat, where self-discovery meets holistic rejuvenation. This retreat is meticulously crafted for individuals seeking a transformative journey towards total well-being. Nestled in the heart of nature, our retreat offers a sanctuary of serenity, inviting you to escape the hustle and bustle of daily lif .Indulge in daily yoga and meditation sessions guided by expert instructors, tailored to all levels of experience. These practices not only enhance physical flexibility but also cultivate mental clarity, emotional balance, and spiritual harmony. Our nutritious, chef-curated meals emphasize the healing power of natural ingredients, nourishing your body and soul.Beyond yoga and mindful practices, immerse yourself in holistic healing therapies, ranging from soothing massages to rejuvenating spa treatments, designed to invigorate your senses and promote deep relaxation",
+            "button": "Learn More"
+           
+        },
+        {
+            "id":3,
+            "name": "Nutrition ",
+            "image": "https://i.ibb.co/26ghCHF/plate-with-paleo-diet-food-boiled-eggs-avocado-cucumber-nuts-cherry-strawberries-paleo-breakfast-top.jpg",
+            "price": "Free",
+            "short_description": "Dive into the world of nutrition at our comprehensive Nutrition Seminar, a transformative event designed to empower you with the knowledge to make informed, health-conscious choices. Led by expert nutritionists and wellness coaches, this seminar delves deep into the science of nutrition, offering practical insights applicable to everyday life.Discover the foundations of a balanced diet, unraveling the mysteries of macronutrients, micronutrients, and mindful eating. Learn to create personalized nutrition plans that cater to your unique needs, goals, and dietary preferences. Explore the impact of nutrition on energy levels, mental clarity, and overall well-being, gaining valuable tools to optimize your healthEngage in interactive workshops and cooking demonstrations, witnessing the creation of delicious, nutrient-packed meals. Understand the significance of whole foods, superfoods, and the role of hydration in maintaining peak vitality.",
+            "button": "Learn More"
+           
+        },
+        {
+            "id":4,
+            "name": "Meditation Workshop",
+            "image": "https://i.ibb.co/M2C1bRL/young-people-working-out-park.jpg",
+            "price": "$40",
+            "short_description": "Embark on a transformative inner journey at our Meditation Workshop, where the ancient art of meditation meets modern mindfulness techniques. In the serene ambiance of our workshop space, discover the profound benefits of meditation under the guidance of experienced meditation instructors. Throughout this immersive workshop, delve into various meditation practices, from mindful breathing to loving-kindness meditation, designed to cultivate mental clarity, emotional balance, and spiritual insight. Learn techniques to quiet the restless mind, reduce stress, and enhance overall well-being.Guided by seasoned practitioners, explore the subtle nuances of meditation, enabling you to establish a sustainable practice tailored to your lifestyle. Dive into discussions on mindfulness in everyday life, discovering how these practices can be seamlessly integrated into your routine, fostering a sense of peace amidst life's challenges.Participate in gentle yoga sessions, enhancing body-mind connection, and deepening the meditative experience. Engage in group discussions and guided reflections, fostering a supportive community of like-minded individuals on the path to self-discovery. Join us for this enriching workshop, where each moment is an opportunity to reconnect with your inner essence, fostering a profound sense of calm and self-awareness that extends far beyond the workshop's duration.",
+            "button": "Learn More"
+           
+        },
+        {
+            "id":5,
+            "name": "Fitness ",
+            "image": "https://i.ibb.co/5Yh3QCx/group-diverse-people-holding-health-fitness-icons.jpg",
+            "price": "$80",
+            "short_description": "Elevate your fitness journey with our intensive Fitness Bootcamp, a high-energy program designed to push your boundaries and achieve peak physical performance. Led by certified fitness trainers, this bootcamp combines rigorous workouts, cardio exercises, and strength training to transform your body and enhance endurance. Engage in dynamic group exercises that foster camaraderie and motivation, creating a supportive environment for your fitness goals. Through a carefully curated blend of aerobic activities and muscle-toning routines, you'll sculpt your body, boost metabolism, and improve overall fitness levels.Our experienced trainers provide personalized guidance, ensuring exercises are tailored to your fitness level while challenging you to surpass your limits. Embrace a holistic approach to health, incorporating nutrition tips and wellness coaching into your fitness regimen.",
+            "button": "Learn More"
+           
+        },
+        {
+            "id":6,
+            "name": "Healthy Food",
+            "image": "https://i.ibb.co/r07M5tC/fresh-fruits-vegetables-background-different-fruits-vegetables-eating-healthy-colorful-fruits-vegeta.jpg",
+            "price": "$25",
+            "short_description": "Discover the art of nourishing your body and delighting your taste buds at our Healthy Cooking Class. Led by skilled chefs, this interactive culinary experience introduces you to the world of wholesome, flavorful cuisine. In our hands-on workshops, learn to create delectable dishes using fresh, locally sourced ingredients. Master the techniques of balanced cooking, emphasizing whole grains, lean proteins, and vibrant fruits and vegetables. Explore the creative fusion of herbs and spices, enhancing your dishes with natural flavors and aromas.Through step-by-step guidance, you'll prepare mouthwatering recipes designed for both taste and nutrition. Gain insights into meal planning, portion control, and mindful eating, empowering you to maintain a healthy lifestyle beyond the kitchen.",
+            "button": "Learn More"
+           
+        }
+    ]
+
