@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 
+// eslint-disable-next-line react/prop-types
 const Cards = ({card}) => {
 const {name,image,short_description,id}= card || {}
     return (
@@ -11,7 +12,9 @@ const {name,image,short_description,id}= card || {}
           {
           short_description.length >180
 
-          ?<p>{short_description.slice(0,200)}<Link to={`/cards/${id}`} className="text-blue-600 pl-2">Read More...</Link></p>
+          ?<p>{short_description.slice(0,200)}<Link to={`/cards/${id}`} className="text-blue-600 pl-2">Read More...
+          
+          </Link></p>
           :
           <p>{short_description}</p>
 

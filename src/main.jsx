@@ -13,6 +13,8 @@ import Register from './Register.jsx';
 import ReadMore from './ReadMore';
 import About from './About';
 import ContactUs from './ContactUs';
+import AuthProvider from './Provider/AuthProvider';
+import PrivateRoute from './PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,13 +23,13 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader: ()=> fetch('/public/services.json')
+        loader: ()=> fetch('/services.json')
         
       },
       {
         path:'/cards/:id',
-        element:<ReadMore></ReadMore>,
-        loader:()=>fetch('/public/services.json')
+        element:<PrivateRoute><ReadMore></ReadMore></PrivateRoute>,
+        loader:()=>fetch('/services.json')
       },
       {
         path:'/login',
@@ -39,11 +41,11 @@ const router = createBrowserRouter([
       },
       {
         path:'/about',
-        element:<About></About>
+        element:<PrivateRoute><About></About></PrivateRoute>
       },
       {
         path:'/contact',
-        element:<ContactUs></ContactUs>
+        element:<PrivateRoute><ContactUs></ContactUs></PrivateRoute>
       }
     
     ]
@@ -52,6 +54,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+   <AuthProvider>
    <RouterProvider router={router} />
+   </AuthProvider>
   </React.StrictMode>,
 )

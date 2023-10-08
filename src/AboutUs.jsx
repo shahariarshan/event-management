@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 
 const AboutUs = () => {
@@ -17,6 +18,9 @@ const AboutUs = () => {
                        
                     </div>
                 </div>
+            </div>
+            <div className="mt-14">
+            <Footer></Footer>
             </div>
         </div>
     );

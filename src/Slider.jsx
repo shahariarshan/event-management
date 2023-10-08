@@ -4,14 +4,14 @@ const Slider = () => {
     return (
         <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full h-96">
-          <img className="lg:object-cover  " src="https://i.ibb.co/r07M5tC/fresh-fruits-vegetables-background-different-fruits-vegetables-eating-healthy-colorful-fruits-vegeta.jpg" className="w-full" />
+          <img className="lg:object-cover  w-full " src="https://i.ibb.co/r07M5tC/fresh-fruits-vegetables-background-different-fruits-vegetables-eating-healthy-colorful-fruits-vegeta.jpg"  />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide6" className="btn btn-circle">❮</a> 
             <a href="#slide2" className="btn btn-circle">❯</a>
           </div>
         </div> 
         <div id="slide2" className="carousel-item relative w-full h-96">
-          <img className="lg:object-cover " src="https://i.ibb.co/kqpWkTq/young-blonde-woman-sportswear-is-meditating-yoga-mat-with-closed-eyes.jpg" className="w-full" />
+          <img className="lg:object-cover w-full " src="https://i.ibb.co/Lzmxn7W/spiritual-retreat-with-man-meditating.jpg"  />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">❮</a> 
             <a href="#slide3" className="btn btn-circle">❯</a>
