@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../assets/848571_O4WJ700.jpg'
+
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <img className=" h-16 mr-4 " src={logo} alt="" />
+          <img className=" h-16 mr-4 " src='https://i.ibb.co/LPc7kNN/848571-O4-WJ700-0729a053.jpg' alt="" />
           <Link to='/' className="btn btn-ghost normal-case text-xl text-green-900">H & W </Link >
 
 
