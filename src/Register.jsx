@@ -1,36 +1,41 @@
 
 import { useContext, useState } from "react";
-// import Navbar from "./Home/Navbar";
-import { AuthContext } from "./Provider/AuthProvider";
 
+import { AuthContext } from "./Provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
-// import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-// import app from "./firebase/Firebase.config";
 import 'react-toastify/dist/ReactToastify.css';
-// import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import { FaEyeSlash,FaEye } from 'react-icons/fa';
+import { Helmet } from "react-helmet-async";
 
 
 
 
 
 const Register = () => {
+  <Helmet>
+                <title>
+                    Health & Wealth | Register
+                </title>
+            </Helmet>
   const { userCreate } = useContext(AuthContext)
-  const [registerError, setRegisterError] = useState('')
-  // const registerNaviGate = useNavigate();
+  const [regError,setRegError]=useState('')
+  const [show,setShow] =useState(false)
+
+
 
   const handleRegister = e => {
     e.preventDefault();
     console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-
     const name = form.get('name')
     const email = form.get('email')
     const password = form.get('password')
-    console.log(email, password, name)
+    const terms = form.get('terms')
+    console.log(email, password, name,terms)
 
-    // setRegisterError('');
+
 
 
 
@@ -38,17 +43,24 @@ const Register = () => {
 
       swal("Minimum eight characters, at least one letter, one number and one special character");
     }
+    if(!terms){
+      toast("Please Accept Our Terms and Conditions");
+    }
     else {
-      setRegisterError('');
+      setRegError('')
 
       if (email) {
         userCreate(email, password)
-          .then(result => {console.log(result.user)
+          .then(result => {
+            console.log(result.user)
+           
           })
 
           .catch(error => console.error(error))
-        
-           toast("Create Account Successfully , Please Login")
+
+        toast("Create Account Successfully , Please Login")
+       
+
       }
 
 
@@ -58,9 +70,11 @@ const Register = () => {
 
     userCreate(email, password)
       .then(result => {
+        
         console.log(result.user)
         e.target.reset();
-        // registerNaviGate('/login')
+       
+
       })
       .catch(error => {
         console.error(error)
@@ -77,7 +91,7 @@ const Register = () => {
     <div>
       {/* <Navbar></Navbar> */}
 
-      <div className="hero min-h-screen  ">
+      <div className="hero min-h-screen  bg- from-emerald-200 ">
 
         <div className="hero-content flex-col lg:flex-row-reverse ">
 
@@ -108,9 +122,16 @@ const Register = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password<small className="pl-2 text-blue-500">(Minimum eight characters, at least one letter, one number and one special character) </small>:</span>
+                 <div className="flex relative">
+                 <span className="label-text">Password<small className="pl-2 text-blue-500">
+                  (Minimum eight characters, at least one letter, one number and one special character) </small>:</span>
+                 <div onClick={() => setShow(!show)} className="absolute pt-16 ml-60 lg:ml-72">
+                 { show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                 
+                 </div> 
+                 </div>
                 </label>
-                <input type="password"
+                <input type={show? 'password':"text"}
                   name="password"
                   placeholder="Password"
                   className="input input-bordered"
@@ -118,17 +139,24 @@ const Register = () => {
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
+               <div className="pt-3">
+               <input type="checkbox" 
+               name="terms"
+               />
+               <label htmlFor="" className="text-red-600 font-medium"> Accept our Terms and Conditions </label>
+               </div>
+
                 <ToastContainer />
               </div>
               <div className="form-control mt-6">
                 <button className="btn bg-gray-700 text-white">
                   Create An Account
                 </button>
-              
+
               </div>
             </form>
-            <p className="p-5">Have An account?<Link className="font-semibold text-blue-800 pl-2 p-6" to='/login'>Login Now</Link></p>
-           
+            <p className="p-5 text-center">Have An account?<Link className="font-semibold text-blue-800 pl-2 p-6" to='/login'>Login Now</Link></p>
+
           </div>
         </div>
 

@@ -1,12 +1,15 @@
 
 import { useLoaderData } from "react-router-dom";
 import Card from "../All cards/Card";
-import Footer from "../Footer";
+
 import Header from "../Header/Header";
 import Slider from "../Slider";
 import Navbar from "./Navbar";
 import AboutUs from "../AboutUs";
 import ContactUs from "../ContactUs";
+import Footer from "../Footer/Footer";
+import { Helmet } from "react-helmet-async";
+
 
 
 const Home = () => {
@@ -14,7 +17,12 @@ const Home = () => {
     console.log(cards)
     
     return (
-        <div>
+        <div className=" mx-auto container bg-gradient-to-r from-cyan-200 to-blue-100">
+            <Helmet>
+                <title>
+                    Health & Wealth | Home
+                </title>
+            </Helmet>
             <Header></Header>
             <Navbar></Navbar>
             <Slider></Slider>
@@ -22,14 +30,7 @@ const Home = () => {
         <div>
            <Card cards={cards}></Card>
         </div>
-        <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-        </div>
+        
         <div>
             <AboutUs></AboutUs>
         </div>

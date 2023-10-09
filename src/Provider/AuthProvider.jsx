@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../firebase/Firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
 export const AuthContext = createContext(null);
@@ -15,14 +15,19 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
 
     const userCreate = (email, password) => {
+        
         return createUserWithEmailAndPassword(auth, email, password)
+
+      
     }
 
     // google provider 
     const provider = new GoogleAuthProvider();
     // const facebookProvider = new FacebookAuthProvider();
-    const googleSignIn = () => {
+    const googleSign = () => {
+        setLoading(true)
         return signInWithPopup(auth, provider)
+
             .then(result => {
                 console.log(result.user)
             })
@@ -43,6 +48,17 @@ const AuthProvider = ({ children }) => {
 //    }
 
 
+   
+
+    const signIn = (email, password) => {
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+    const logOut = () => {
+        setLoading(true)
+        return signOut(auth)
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             console.log(currentUser)
@@ -54,16 +70,6 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    const signIn = (email, password) => {
-        setLoading(true)
-        return signInWithEmailAndPassword(auth, email, password)
-    }
-    const logOut = () => {
-        setLoading(true)
-        return signOut(auth)
-    }
-
-
 
 
 
@@ -72,7 +78,7 @@ const AuthProvider = ({ children }) => {
         loading,
         userCreate,
         signIn,
-        googleSignIn,
+        googleSign,
         // facebookPopUp,
         logOut,
         

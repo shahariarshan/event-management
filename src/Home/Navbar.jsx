@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../assets/3d-deal-hand-shake-design-element.jpg'
+import logo from '../assets/848571_O4WJ700.jpg'
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
@@ -20,8 +20,10 @@ const Navbar = () => {
   const navLink = <>
     <li className="font-medium text-slate-950"><NavLink to='/'> Home</NavLink> </li>
     <li className="font-medium text-slate-950"><NavLink to='/about'>About</NavLink> </li>
-    <li className="font-medium text-slate-950"><NavLink to='/contact'>Contact Us</NavLink> </li>
-    <li className="font-medium text-slate-950"><NavLink to='/join'>Join Us</NavLink> </li>
+    <li className="font-medium text-slate-950"><NavLink to='/advices'>Advices</NavLink> </li>
+    <li className="font-medium text-slate-950"><NavLink to='/achievements'>Achievements</NavLink> </li>
+    <li className="font-medium text-slate-950"><NavLink to='/team'>Our Team</NavLink> </li>
+   
 
 
   </>
@@ -40,7 +42,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <img className="w-24 mr-4" src={logo} alt="" />
+          <img className=" h-16 mr-4 " src={logo} alt="" />
           <Link to='/' className="btn btn-ghost normal-case text-xl text-green-900">H & W </Link >
 
 
@@ -50,6 +52,14 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
+        {/* <div className="navbar-center lg:navbar-end">
+          {
+            user && <span>{user.displayName}</span>
+          }
+        </div> */}
+        {/* <div className="w-10 rounded-full">
+          <img src="{user.photoUrl}" />
+        </div> */}
         <div className="navbar-end">
           {
             user ?

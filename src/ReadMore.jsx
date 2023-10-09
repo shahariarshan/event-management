@@ -2,9 +2,15 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "./Home/Navbar";
 import { useEffect, useState } from "react";
 import CardDetails from "./CardDetails";
+import { Helmet } from "react-helmet-async";
 
 
 const ReadMore = () => {
+    <Helmet>
+                <title>
+                    Health & Wealth | Card Details
+                </title>
+            </Helmet>
     const {id} =useParams()
 
     const cards =useLoaderData();
